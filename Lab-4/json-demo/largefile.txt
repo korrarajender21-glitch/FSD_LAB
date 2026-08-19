@@ -1,0 +1,4 @@
+Welcome to Node.js.
+Streams are used for handling large files.
+Node.js can read files chunk by chunk.
+This is efficient because the entire file is not loaded into memory at once.

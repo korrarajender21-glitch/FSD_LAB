@@ -1,0 +1,2 @@
+Welcome to Node.js
+Streams are efficient for file handling.

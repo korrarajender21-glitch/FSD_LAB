@@ -1,0 +1,26 @@
+[
+  {
+    "rollNo": "B24CS180",
+    "name": "Sai Sathwik",
+    "department": "CSE",
+    "cgpa": 8.89
+  },
+  {
+    "rollNo": "B24CS175",
+    "name": "Sai Ashish",
+    "department": "CSE",
+    "cgpa": 8.91
+  },
+  {
+    "rollNo": "B24CS141",
+    "name": "Sathvika",
+    "department": "CSE",
+    "cgpa": 9.48
+  },
+  {
+    "rollNo": "B24CS154",
+    "name": "Niveditha",
+    "department": "CSE",
+    "cgpa": 8.34
+  }
+]

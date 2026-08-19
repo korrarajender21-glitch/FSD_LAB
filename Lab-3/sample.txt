@@ -1,0 +1,2 @@
+Welcome to Node.js!
+This file is read, using the fs module.
