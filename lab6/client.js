@@ -1,11 +1,34 @@
-const http=require("http");
-const server=http.createServer((req,res)=>{
-    res.writeHead(200,{
-        "Content-Type":"text/html"
+import http from "http";
+
+const options = {
+    hostname: "localhost",
+    port: 8088,
+    path: "/",
+    method: "GET"
+};
+
+function handleResponse(response) {
+    let serverData = "";
+
+    response.on("data", function (chunk) {
+        serverData += chunk;
     });
-    res.write("<h1>HI WELCOME TO SERVER......!</h1>");
-    res.end();
+
+    response.on("end", function () {
+        console.log("Response Status:", response.statusCode);
+        console.log("Response Headers:", response.headers);
+        console.log("Response Body:");
+        console.log(serverData);
+    });
+}
+
+const request = http.request(options, function (response) {
+    handleResponse(response);
 });
-server.listen(3000,()=>{
-    console.log("server is running at prt 3000");
+
+request.on("error", function (error) {
+    console.log("Request Error:", error);
+    console.log("Request Code:", error.message);
 });
+
+request.end();
